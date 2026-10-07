@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { COMPANY_INFO } from '../data/edcData';
-import { scrollToSection } from '../lib/scroll';
 import { EDCLogo } from './EDCLogo';
 import { LegalModal } from './LegalModal';
 
@@ -31,62 +30,23 @@ export const Footer: React.FC = () => {
             <span className="block text-[#D9A441] uppercase tracking-widest font-semibold mb-2">
               NAVIGATION
             </span>
-            <ul className="space-y-2">
-              <li>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection('#hero')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Accueil
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection('#a-propos')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  À propos
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection('#services')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Nos services
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection('#realisations')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Réalisations
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection('#approche')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Notre approche
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection('#contact')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Contact
-                </button>
-              </li>
-            </ul>
+        <ul className="space-y-2">
+          <li>
+            <a href="/" className="hover:text-white transition-colors cursor-pointer">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="/equipe" className="hover:text-white transition-colors cursor-pointer">
+              Équipe
+            </a>
+          </li>
+          <li>
+            <a href="/realisations" className="hover:text-white transition-colors cursor-pointer">
+              Réalisations
+            </a>
+          </li>
+        </ul>
           </div>
 
           {/* Legal Coordinates Column */}

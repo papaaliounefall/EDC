@@ -20,18 +20,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProjectModal }) => {
   }, []);
 
   const navLinks = [
-    { label: 'Accueil', href: '#hero' },
-    { label: 'À propos', href: '#a-propos' },
-    { label: 'Nos services', href: '#services' },
-    { label: 'Réalisations', href: '#realisations' },
-    { label: 'Notre approche', href: '#approche' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Accueil', href: '/' },
+    { label: 'Équipe', href: '/equipe' },
+    { label: 'Réalisations', href: '/realisations' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-    scrollToSection(href);
+    // Si lien interne page accueil (ancre), scroll; sinon laisser navigation router
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      setMobileMenuOpen(false);
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      setMobileMenuOpen(false);
+    }
   };
 
   const handleCtaClick = () => {
@@ -54,8 +59,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProjectModal }) => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Zone 1: Official Brand Logo (Single Element) */}
         <a
-          href="#hero"
-          onClick={(e) => handleNavClick(e, '#hero')}
+          href="/"
           className="flex items-center transition-opacity hover:opacity-90 shrink-0"
           aria-label="EDC — Entreprise Dia Construction"
         >
