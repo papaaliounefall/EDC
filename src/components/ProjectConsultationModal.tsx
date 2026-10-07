@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Send, CheckCircle2 } from 'lucide-react';
 import { useModalA11y } from '../lib/useModalA11y';
+import { submitToFormspree } from '../lib/formspree';
 import { EDCLogo } from './EDCLogo';
 import { FormField, fieldControlClass } from './FormField';
 
