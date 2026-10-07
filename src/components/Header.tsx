@@ -21,8 +21,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProjectModal }) => {
 
   const navLinks = [
     { label: 'Accueil', href: '/' },
+    { label: 'À propos', href: '/#a-propos' },
+    { label: 'Nos services', href: '/#services' },
+    { label: 'Réalisations', href: '/#realisations' },
+    { label: 'Notre approche', href: '/#approche' },
+    { label: 'Contact', href: '/#contact' },
     { label: 'Équipe', href: '/equipe' },
-    { label: 'Réalisations', href: '/realisations' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
