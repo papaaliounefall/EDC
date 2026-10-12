@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useSeo } from '../lib/useSeo';
+import { getSeo } from '../seo';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 import { PROJECTS_LIST } from '../data/edcData';
 
 export default function Realisations() {
+  useSeo(getSeo('/realisations'));
+
   const [activeCategory, setActiveCategory] = useState<string>('Tous');
   const categories = ['Tous', 'Bâtiment', 'Génie Civil', 'VRD & Aménagements'];
   const filteredProjects =

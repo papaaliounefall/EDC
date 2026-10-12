@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSeo } from '../lib/useSeo';
+import { getSeo } from '../seo';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
@@ -11,6 +13,8 @@ const TEAM = [
 ];
 
 export default function Team() {
+  useSeo(getSeo('/equipe'));
+
   return (
     <div className="min-h-screen bg-[#1F1F1B] text-[#F6F6F2] font-sans antialiased selection:bg-[#D9A441] selection:text-[#1F1F1B]">
       <Header />

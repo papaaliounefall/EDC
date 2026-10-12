@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useSeo } from '../lib/useSeo';
+import { getSeo } from '../seo';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { Introduction } from '../components/Introduction';
@@ -15,6 +17,8 @@ import { ProjectConsultationModal } from '../components/ProjectConsultationModal
 
 export default function Home() {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+
+  useSeo(getSeo('/'));
 
   return (
     <div className="min-h-screen bg-[#1F1F1B] text-[#F6F6F2] font-sans antialiased selection:bg-[#D9A441] selection:text-[#1F1F1B]">
