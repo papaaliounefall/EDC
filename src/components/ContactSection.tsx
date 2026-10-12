@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Phone, Mail, MapPin, MessageSquare, CheckCircle } from 'lucide-react';
-import { COMPANY_INFO } from '../data/edcData';
+import { COMPANY_INFO, isProvided } from '../data/edcData';
 import { submitToFormspree } from '../lib/formspree';
 import { EDCLogo } from './EDCLogo';
 import { FormField, fieldControlClass } from './FormField';
@@ -18,6 +18,12 @@ export const ContactSection: React.FC = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const showPhone = isProvided(COMPANY_INFO.phone);
+  const showEmail = isProvided(COMPANY_INFO.email);
+  const showAddress = isProvided(COMPANY_INFO.address);
+  const showWhatsapp = isProvided(COMPANY_INFO.whatsapp);
+  const hasCoordinates = showPhone || showEmail || showAddress || showWhatsapp;
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -112,39 +118,56 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="space-y-6 pt-6 border-t border-[#292924] text-sm">
-                <div className="flex items-start gap-3.5">
-                  <Phone className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
-                  <div>
-                    <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Téléphone</span>
-                    <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.phone}</span>
-                  </div>
-                </div>
+                {hasCoordinates ? (
+                  <>
+                    {showPhone && (
+                      <div className="flex items-start gap-3.5">
+                        <Phone className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
+                        <div>
+                          <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Téléphone</span>
+                          <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.phone}</span>
+                        </div>
+                      </div>
+                    )}
 
-                <div className="flex items-start gap-3.5">
-                  <Mail className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
-                  <div>
-                    <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Email</span>
-                    <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.email}</span>
-                  </div>
-                </div>
+                    {showEmail && (
+                      <div className="flex items-start gap-3.5">
+                        <Mail className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
+                        <div>
+                          <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Email</span>
+                          <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.email}</span>
+                        </div>
+                      </div>
+                    )}
 
-                <div className="flex items-start gap-3.5">
-                  <MapPin className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
-                  <div>
-                    <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Adresse</span>
-                    <span className="text-[#EBEBE4] font-medium">
-                      {COMPANY_INFO.address}, {COMPANY_INFO.country}
-                    </span>
-                  </div>
-                </div>
+                    {showAddress && (
+                      <div className="flex items-start gap-3.5">
+                        <MapPin className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
+                        <div>
+                          <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Adresse</span>
+                          <span className="text-[#EBEBE4] font-medium">
+                            {COMPANY_INFO.address}, {COMPANY_INFO.country}
+                          </span>
+                        </div>
+                      </div>
+                    )}
 
-                <div className="flex items-start gap-3.5">
-                  <MessageSquare className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
-                  <div>
-                    <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">WhatsApp</span>
-                    <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.whatsapp}</span>
-                  </div>
-                </div>
+                    {showWhatsapp && (
+                      <div className="flex items-start gap-3.5">
+                        <MessageSquare className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
+                        <div>
+                          <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">WhatsApp</span>
+                          <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.whatsapp}</span>
+                        </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <p className="text-sm text-[#8C8C80] font-light leading-relaxed">
+                    Coordonnées bientôt disponibles. Utilisez le formulaire ci-contre pour nous transmettre
+                    votre demande.
+                  </p>
+                )}
               </div>
             </div>
 

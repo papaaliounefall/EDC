@@ -1,6 +1,6 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import { COMPANY_INFO } from '../data/edcData';
+import { COMPANY_INFO, isProvided } from '../data/edcData';
 import { useModalA11y } from '../lib/useModalA11y';
 
 interface LegalModalProps {
@@ -12,6 +12,12 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
   const dialogRef = useModalA11y(isOpen, onClose);
 
   if (!isOpen) return null;
+
+  const hasAddress = isProvided(COMPANY_INFO.address);
+  const hasEmail = isProvided(COMPANY_INFO.email);
+  const contactLine = [isProvided(COMPANY_INFO.phone) && COMPANY_INFO.phone, hasEmail && COMPANY_INFO.email]
+    .filter(Boolean)
+    .join(' — ');
 
   return (
     <div
@@ -47,12 +53,10 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
               1 — Éditeur du site
             </h4>
             <p>
-              {COMPANY_INFO.name}, société de droit sénégalais, siège : {COMPANY_INFO.address},{' '}
-              {COMPANY_INFO.country}.
+              {COMPANY_INFO.name}, société de droit sénégalais
+              {hasAddress ? `, siège : ${COMPANY_INFO.address}, ${COMPANY_INFO.country}` : ''}.
             </p>
-            <p>
-              Contact : {COMPANY_INFO.phone} — {COMPANY_INFO.email}
-            </p>
+            {contactLine && <p>Contact : {contactLine}</p>}
             <p className="text-[#8C8C80] text-xs font-mono">
               Directeur de la publication : [à compléter] — RCCM / NINEA : [à compléter]
             </p>
@@ -78,8 +82,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
               Elles ne sont ni cédées ni vendues à des tiers, et sont conservées le temps nécessaire
               au traitement de votre demande. Conformément à la loi n° 2008-12 du 25 janvier 2008
               relative à la protection des données à caractère personnel au Sénégal, vous disposez
-              d’un droit d’accès, de rectification et de suppression de vos données : adressez votre
-              demande à {COMPANY_INFO.email}.
+                d’un droit d’accès, de rectification et de suppression de vos données : adressez votre
+                demande {hasEmail ? `à ${COMPANY_INFO.email}` : 'via le formulaire de contact du site'}.
             </p>
             <p>
               Ce site ne dépose aucun cookie de traçage. Un service de mesure d’audience

@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { COMPANY_INFO } from '../data/edcData';
+import { COMPANY_INFO, isProvided } from '../data/edcData';
 import { EDCLogo } from './EDCLogo';
 import { LegalModal } from './LegalModal';
 
 export const Footer: React.FC = () => {
   const [isLegalOpen, setIsLegalOpen] = useState(false);
+
+  const contactLines = [
+    isProvided(COMPANY_INFO.address) && `Siège : ${COMPANY_INFO.address}, Sénégal`,
+    isProvided(COMPANY_INFO.phone) && `Téléphone : ${COMPANY_INFO.phone}`,
+    isProvided(COMPANY_INFO.email) && `Email : ${COMPANY_INFO.email}`,
+  ].filter(Boolean) as string[];
 
   return (
     <footer className="bg-[#141411] text-[#A8A89E] border-t border-[#292924] py-16 sm:py-20">
@@ -75,9 +81,11 @@ export const Footer: React.FC = () => {
               COORDINATION
             </span>
             <div className="space-y-2 text-[#8C8C80]">
-              <div>Siège : {COMPANY_INFO.address}, Sénégal</div>
-              <div>Téléphone : {COMPANY_INFO.phone}</div>
-              <div>Email : {COMPANY_INFO.email}</div>
+              {contactLines.length > 0 ? (
+                contactLines.map((line) => <div key={line}>{line}</div>)
+              ) : (
+                <div>Coordonnées bientôt disponibles.</div>
+              )}
               <div className="pt-2 text-[11px] text-[#6B6B62]">
                 Bâtiment • Génie civil • Travaux publics au Sénégal
               </div>

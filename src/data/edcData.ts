@@ -3,6 +3,15 @@ import buildingImg from '../assets/images/edc_project_building_1791383501224.web
 import civilImg from '../assets/images/edc_project_civil_1791383512872.webp';
 import amenagementImg from '../assets/images/edc_project_amenagement_1791383524028.webp';
 
+/** Marqueur des données restant à renseigner avant mise en ligne. */
+export const PENDING_VALUE = '[à compléter]';
+
+/** Indique si une donnée a été renseignée (ni vide, ni placeholder). */
+export const isProvided = (value: string | null | undefined): boolean => {
+  const trimmed = (value ?? '').trim();
+  return trimmed.length > 0 && !trimmed.includes(PENDING_VALUE);
+};
+
 export const COMPANY_INFO = {
   name: 'EDC — Entreprise Dia Construction',
   shortName: 'EDC',
@@ -19,6 +28,13 @@ export const COMPANY_INFO = {
   whatsapp: '[à compléter]',
   whatsappRaw: '221000000000',
 };
+
+export const CONTACT_STATUS = {
+  phone: isProvided(COMPANY_INFO.phone),
+  email: isProvided(COMPANY_INFO.email),
+  address: isProvided(COMPANY_INFO.address),
+  whatsapp: isProvided(COMPANY_INFO.whatsapp),
+} as const;
 
 export const SERVICES_LIST: ServiceItem[] = [
   {
