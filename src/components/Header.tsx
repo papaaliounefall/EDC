@@ -91,7 +91,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProjectModal }) => {
             onClick={handleCtaClick}
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#1F1F1B] bg-[#D9A441] hover:bg-[#C59132] transition-colors whitespace-nowrap cursor-pointer shadow-sm active:translate-y-0.5"
           >
-            <span>Parler de votre projet</span>
+            <span>Demander un devis</span>
             <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
           </button>
 
@@ -126,7 +126,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProjectModal }) => {
               onClick={handleCtaClick}
               className="mt-3 flex items-center justify-center gap-2 w-full py-3 text-xs font-semibold uppercase tracking-wider text-[#1F1F1B] bg-[#D9A441] hover:bg-[#C59132] transition-colors"
             >
-              <span>Parler de votre projet</span>
+              <span>Demander un devis</span>
               <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
             </button>
           </nav>

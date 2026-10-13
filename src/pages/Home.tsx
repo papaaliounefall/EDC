@@ -26,7 +26,7 @@ export default function Home() {
       <main>
         <Hero />
         <Introduction />
-        <Services />
+        <Services onOpenProjectModal={() => setIsConsultationModalOpen(true)} />
         <Projects />
         <Approach />
         <WhyEDC />

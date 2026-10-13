@@ -90,7 +90,7 @@ export const ProjectConsultationModal: React.FC<ProjectConsultationModalProps> =
                 ÉTUDE DE VOTRE PROJET
               </span>
               <h3 id="consultation-dialog-title" className="font-display text-lg sm:text-xl font-bold text-white">
-                Parler de votre projet avec EDC
+                Demander un devis
               </h3>
             </div>
           </div>

@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { ArrowUpRight, ChevronDown } from 'lucide-react';
 import { SERVICES_LIST } from '../data/edcData';
 
-export const Services: React.FC = () => {
+interface ServicesProps {
+  onOpenProjectModal?: () => void;
+}
+
+export const Services: React.FC<ServicesProps> = ({ onOpenProjectModal }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   const toggleExpand = (index: number) => {
@@ -115,13 +119,24 @@ export const Services: React.FC = () => {
         {/* Note on adaptability */}
         <div className="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono text-[#8C8C80] border-t border-[#292924] pt-6">
           <span>* Chaque prestation est ajustée à votre cahier des charges et à votre budget.</span>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-1.5 text-[#D9A441] hover:underline"
-          >
-            <span>Parler de votre projet</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
+          {onOpenProjectModal ? (
+            <button
+              type="button"
+              onClick={onOpenProjectModal}
+              className="inline-flex items-center gap-1.5 text-[#D9A441] hover:underline cursor-pointer"
+            >
+              <span>Demander un devis</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </button>
+          ) : (
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-1.5 text-[#D9A441] hover:underline"
+            >
+              <span>Demander un devis</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          )}
         </div>
       </div>
     </section>
