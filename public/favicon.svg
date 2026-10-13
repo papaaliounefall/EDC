@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EDC — Entreprise Dia Construction">
+  <rect width="64" height="64" rx="8" fill="#1F1F1B" />
+  <path d="M18 20L9 28h3l6-5 6 5h3L18 20z" fill="#4A6275" />
+  <path d="M33 16L19 28h3l11-9 11 9h4L33 16z" fill="#F2A115" />
+  <text x="8" y="52" font-family="sans-serif" font-weight="900" font-size="22" fill="#FFFFFF" letter-spacing="-0.5">EDC</text>
+</svg>
