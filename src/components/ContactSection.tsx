@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Phone, Mail, MapPin, MessageSquare, CheckCircle } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, MessageSquare, CheckCircle, FileText } from 'lucide-react';
 import { COMPANY_INFO, isProvided } from '../data/edcData';
 import { submitToFormspree } from '../lib/formspree';
 import { EDCLogo } from './EDCLogo';
@@ -21,9 +21,10 @@ export const ContactSection: React.FC = () => {
 
   const showPhone = isProvided(COMPANY_INFO.phone);
   const showEmail = isProvided(COMPANY_INFO.email);
+  const showEmailDevis = isProvided(COMPANY_INFO.emailDevis);
   const showAddress = isProvided(COMPANY_INFO.address);
   const showWhatsapp = isProvided(COMPANY_INFO.whatsapp);
-  const hasCoordinates = showPhone || showEmail || showAddress || showWhatsapp;
+  const hasCoordinates = showPhone || showEmail || showEmailDevis || showAddress || showWhatsapp;
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -136,6 +137,16 @@ export const ContactSection: React.FC = () => {
                         <div>
                           <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Email</span>
                           <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.email}</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {showEmailDevis && (
+                      <div className="flex items-start gap-3.5">
+                        <FileText className="w-4 h-4 text-[#D9A441] mt-0.5 shrink-0" />
+                        <div>
+                          <span className="block text-[11px] font-mono text-[#8C8C80] uppercase">Devis</span>
+                          <span className="text-[#EBEBE4] font-medium">{COMPANY_INFO.emailDevis}</span>
                         </div>
                       </div>
                     )}

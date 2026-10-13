@@ -53,12 +53,15 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
               1 — Éditeur du site
             </h4>
             <p>
-              {COMPANY_INFO.name}, société de droit sénégalais
+              {COMPANY_INFO.legalName}, société de droit sénégalais
               {hasAddress ? `, siège : ${COMPANY_INFO.address}, ${COMPANY_INFO.country}` : ''}.
+            </p>
+            <p className="text-[#8C8C80] text-xs font-mono">
+              NINEA : {COMPANY_INFO.nineA} — RCCM : {COMPANY_INFO.rccm}
             </p>
             {contactLine && <p>Contact : {contactLine}</p>}
             <p className="text-[#8C8C80] text-xs font-mono">
-              Directeur de la publication : [à compléter] — RCCM / NINEA : [à compléter]
+              Directeur de la publication : {COMPANY_INFO.director}
             </p>
           </section>
 
@@ -66,7 +69,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
             <h4 className="font-mono text-xs uppercase tracking-widest text-ocre font-semibold">
               2 — Hébergement
             </h4>
-            <p className="text-[#8C8C80] text-xs font-mono">Hébergeur : [à compléter]</p>
+            <p className="text-[#8C8C80] text-xs font-mono">Hébergeur : {COMPANY_INFO.host}</p>
           </section>
 
           <section className="space-y-3">

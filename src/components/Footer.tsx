@@ -10,6 +10,7 @@ export const Footer: React.FC = () => {
     isProvided(COMPANY_INFO.address) && `Siège : ${COMPANY_INFO.address}, Sénégal`,
     isProvided(COMPANY_INFO.phone) && `Téléphone : ${COMPANY_INFO.phone}`,
     isProvided(COMPANY_INFO.email) && `Email : ${COMPANY_INFO.email}`,
+    isProvided(COMPANY_INFO.emailDevis) && `Devis : ${COMPANY_INFO.emailDevis}`,
   ].filter(Boolean) as string[];
 
   return (

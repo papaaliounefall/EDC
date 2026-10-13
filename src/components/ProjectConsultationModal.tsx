@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Send, CheckCircle2 } from 'lucide-react';
 import { useModalA11y } from '../lib/useModalA11y';
 import { submitToFormspree } from '../lib/formspree';
+import { COMPANY_INFO, isProvided } from '../data/edcData';
 import { EDCLogo } from './EDCLogo';
 import { FormField, fieldControlClass } from './FormField';
 
@@ -133,6 +134,13 @@ export const ProjectConsultationModal: React.FC<ProjectConsultationModalProps> =
               <p className="text-xs text-[#A8A89E] font-light leading-relaxed">
                 Remplissez ce court formulaire pour soumettre les caractéristiques de votre opération de construction ou travaux publics.
               </p>
+
+              {isProvided(COMPANY_INFO.emailDevis) && (
+                <p className="text-xs text-[#A8A89E] font-light leading-relaxed">
+                  Ou adressez votre demande de devis à{' '}
+                  <span className="text-[#D9A441] font-medium">{COMPANY_INFO.emailDevis}</span>.
+                </p>
+              )}
 
               {error && (
                 <div className="p-3 bg-red-950/60 border border-red-500/50 text-red-300 text-xs font-mono">

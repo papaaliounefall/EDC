@@ -14,6 +14,7 @@ export const isProvided = (value: string | null | undefined): boolean => {
 
 export const COMPANY_INFO = {
   name: 'EDC — Entreprise Dia Construction',
+  legalName: 'Entreprise Dia Construction',
   shortName: 'EDC',
   tagline: 'Construire avec précision. Bâtir pour durer.',
   subtitle:
@@ -21,9 +22,14 @@ export const COMPANY_INFO = {
   domains: 'Bâtiment • Génie civil • Travaux publics',
   phone: '+221 77 710 95 05',
   phoneRaw: '+221777109505',
-  email: 'commercial@edc.sn',
-  address: '[à compléter], Dakar',
+  email: 'contact@edc.sn',
+  emailDevis: 'commercial@edc.sn',
+  address: 'Mbour, Saly Carrefour, commune de Saly Portudal',
   country: 'Sénégal',
+  nineA: '010809666',
+  rccm: 'SN MBR 2023 A 3538',
+  director: 'Serigne Dia',
+  host: 'SENE MULTIMEDIA Suarl (dakarweb.net), Ouest Foire Cité Khandar Lot 19, Dakar',
   whatsapp: '+221 77 710 95 05',
   whatsappRaw: '221777109505',
 };
@@ -31,6 +37,7 @@ export const COMPANY_INFO = {
 export const CONTACT_STATUS = {
   phone: isProvided(COMPANY_INFO.phone),
   email: isProvided(COMPANY_INFO.email),
+  emailDevis: isProvided(COMPANY_INFO.emailDevis),
   address: isProvided(COMPANY_INFO.address),
   whatsapp: isProvided(COMPANY_INFO.whatsapp),
 } as const;
