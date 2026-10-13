@@ -25,7 +25,7 @@ export const Introduction: React.FC = () => {
 
             <div className="space-y-6 text-[#4D4D46] text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
               <p>
-                EDC est une entreprise de construction sénégalaise basée à Mbour. Nous accompagnons
+                EDC est une entreprise de construction sénégalaise basée à Thiès. Nous accompagnons
                 particuliers, entreprises et collectivités de l’étude à la livraison, avec une même exigence :
                 un ouvrage solide, livré dans les délais et au juste coût.
               </p>
@@ -87,7 +87,7 @@ export const Introduction: React.FC = () => {
               {/* Caption */}
               <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-[#6B6B62] px-1">
                 <span>MATIÈRE & STRUCTURE</span>
-                <span className="text-[#A67825]">Mbour • Sénégal</span>
+                <span className="text-[#A67825]">Thiès • Sénégal</span>
               </div>
             </div>
           </div>
