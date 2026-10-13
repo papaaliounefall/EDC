@@ -7,6 +7,8 @@ interface SeoOptions {
   description: string;
   /** Chemin absolu de la route, ex : "/", "/realisations", "/equipe". */
   path: string;
+  /** Empêche l'indexation (ex : page 404). */
+  noindex?: boolean;
 }
 
 const setMeta = (attribute: 'name' | 'property', key: string, content: string): void => {
@@ -29,23 +31,32 @@ const setCanonical = (href: string): void => {
   element.setAttribute('href', href);
 };
 
+const removeMeta = (attribute: 'name' | 'property', key: string): void => {
+  document.head.querySelector(`meta[${attribute}="${key}"]`)?.remove();
+};
+
 /**
  * Met à jour des métadonnées SEO propres à chaque route côté client
  * (title, description, canonical, Open Graph, Twitter) sans dépendance externe.
  * L'URL absolue est dérivée de l'origine réelle au runtime.
  */
-export function useSeo({ title, description, path }: SeoOptions): void {
+export function useSeo({ title, description, path, noindex = false }: SeoOptions): void {
   useEffect(() => {
     const origin = window.location.origin.replace(/\/+$/, '');
     const url = `${origin}${path}`;
 
     document.title = title;
     setMeta('name', 'description', description);
-    setCanonical(url);
+    if (noindex) {
+      setMeta('name', 'robots', 'noindex, follow');
+    } else {
+      setCanonical(url);
+      removeMeta('name', 'robots');
+    }
     setMeta('property', 'og:title', title);
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:url', url);
     setMeta('name', 'twitter:title', title);
     setMeta('name', 'twitter:description', description);
-  }, [title, description, path]);
+  }, [title, description, path, noindex]);
 }

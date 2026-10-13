@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {defineConfig, loadEnv, type Plugin} from 'vite';
 import {ROUTES_SEO} from './src/seo.ts';
 
-const DEFAULT_SITE_URL = 'https://VOTRE-DOMAINE.sn';
+const DEFAULT_SITE_URL = 'https://edc.sn';
 
 /**
  * Injecte l'URL publique du site dans index.html (%SITE_URL%) et génère

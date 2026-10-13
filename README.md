@@ -40,7 +40,7 @@ Sans cette variable : en dev l'envoi est simulé (avec un avertissement en conso
 L'URL publique du site est pilotée par `VITE_SITE_URL` (origine, sans slash final) :
 
 ```
-VITE_SITE_URL="https://www.edc-construction.sn"
+VITE_SITE_URL="https://edc.sn"
 ```
 
 Elle est utilisée au build pour :
@@ -61,6 +61,23 @@ métadonnées SEO propres à chacune ; l'app s'hydrate ensuite côté client.
 
 Les métadonnées SEO (`title`, `description`, `canonical`, `og:*`, `twitter:*`) sont centralisées
 dans `src/seo.ts` (`ROUTES_SEO`) et consommées par `useSeo` (client), le prerender et le sitemap.
+
+## Déploiement chez dakarweb.net (cPanel / Apache)
+
+L'hébergement mutualisé n'exécute pas Node : on **build en local** puis on dépose les fichiers.
+
+1. Définir le domaine pour le build (`.env.local`) :
+   ```
+   VITE_SITE_URL="https://tondomaine.sn"
+   ```
+2. Builder : `npm run build` → dossier `dist/`.
+3. Dans cPanel (**Gestionnaire de fichiers**, ou par FTP), uploader **le contenu** de `dist/`
+   (pas le dossier lui-même) à la racine du site (`public_html`). Le fichier `public/.htaccess`
+   est automatiquement copié dans `dist/` et gère le routage SPA + le cache + la compression.
+4. Activer le certificat SSL (Let's Encrypt / AutoSSL) dans cPanel.
+5. Mises à jour : relancer `npm run build`, puis re-uploader le contenu de `dist/` (écraser).
+
+`vercel.json` n'est utilisé que si le site est hébergé sur Vercel ; il est ignoré par Apache.
 
 ## Contenu à compléter avant mise en ligne
 
