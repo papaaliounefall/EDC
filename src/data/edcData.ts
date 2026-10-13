@@ -19,14 +19,14 @@ export const COMPANY_INFO = {
   subtitle:
     'EDC accompagne vos projets de construction et de travaux publics avec une approche fondée sur la qualité, la rigueur et la maîtrise de l’exécution.',
   domains: 'Bâtiment • Génie civil • Travaux publics',
-  phone: '[à compléter]',
-  phoneRaw: '+221000000000',
+  phone: '+221 77 710 95 05',
+  phoneRaw: '+221777109505',
   email: '[à compléter]',
   emailPlaceholder: 'contact@edc-construction.sn',
   address: '[à compléter], Dakar',
   country: 'Sénégal',
-  whatsapp: '[à compléter]',
-  whatsappRaw: '221000000000',
+  whatsapp: '+221 77 710 95 05',
+  whatsappRaw: '221777109505',
 };
 
 export const CONTACT_STATUS = {
