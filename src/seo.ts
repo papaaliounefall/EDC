@@ -14,9 +14,9 @@ export interface RouteSeo {
 export const ROUTES_SEO: RouteSeo[] = [
   {
     path: '/',
-    title: 'EDC — Entreprise Dia Construction | Bâtiment & Travaux Publics',
+    title: 'EDC — Entreprise Dia Construction | BTP Thiès & Sénégal',
     description:
-      'EDC — Entreprise Dia Construction accompagne vos projets de construction, génie civil et travaux publics au Sénégal.',
+      'EDC — Entreprise Dia Construction accompagne vos projets de construction, génie civil et travaux publics au Sénégal (Thiès, Mbour, Saly, Dakar).',
     changefreq: 'monthly',
     priority: '1.0',
   },
@@ -24,7 +24,7 @@ export const ROUTES_SEO: RouteSeo[] = [
     path: '/realisations',
     title: 'Réalisations | EDC — Entreprise Dia Construction',
     description:
-      "Références d'EDC au Sénégal : construction de bâtiments, génie civil, travaux publics, VRD et aménagements extérieurs.",
+      "Références d'EDC au Sénégal : construction de bâtiments, génie civil, travaux publics, VRD et aménagements à Thiès, Mbour et Dakar.",
     changefreq: 'monthly',
     priority: '0.8',
   },
@@ -32,7 +32,7 @@ export const ROUTES_SEO: RouteSeo[] = [
     path: '/equipe',
     title: 'Équipe & encadrement | EDC — Entreprise Dia Construction',
     description:
-      "Découvrez l'encadrement d'EDC : direction technique, bureau d'études, conduite de travaux et encadrement de chantier au Sénégal.",
+      "Découvrez l'encadrement d'EDC : direction technique, bureau d'études, conduite de travaux et encadrement de chantier au Sénégal (Thiès, Mbour, Dakar).",
     changefreq: 'yearly',
     priority: '0.5',
   },

@@ -28,7 +28,7 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenProjectModal }) =>
         </h2>
 
         <p className="text-base sm:text-xl text-[#D8D8CF] max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-          Parlons de vos besoins et étudions ensemble la meilleure manière de donner vie à votre projet.
+          Parlons de votre projet. Nous étudions votre besoin et vous proposons une solution adaptée, sans engagement.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

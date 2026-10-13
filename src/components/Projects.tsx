@@ -11,7 +11,7 @@ export const Projects: React.FC = () => {
   const closeModal = () => setSelectedProject(null);
   const modalRef = useModalA11y(Boolean(selectedProject), closeModal);
 
-  const categories = ['Tous', 'Bâtiment', 'Génie Civil', 'VRD & Aménagements'];
+  const categories = ['Tous', 'Bâtiment', 'Travaux Publics', 'VRD & Aménagements'];
 
   const filteredProjects =
     activeCategory === 'Tous'
@@ -59,8 +59,8 @@ export const Projects: React.FC = () => {
 
         {/* Editorial Notice on Typologies */}
         <div className="mb-8 p-3 bg-white border border-[#E0E0D8] text-xs font-mono text-[#6B6B62] flex items-center justify-between">
-          <span>* Fiches illustrant les typologies d’ouvrages prises en charge au Sénégal.</span>
-          <span className="hidden sm:inline text-[#A67825]">SÉLECTION CONFORME EDC</span>
+          <span>* Aperçu des typologies d’ouvrages que nous réalisons au Sénégal.</span>
+          <span className="hidden sm:inline text-[#A67825]">RÉALISATIONS EDC</span>
         </div>
 
         {/* Editorial Asymmetric Layout */}
@@ -179,7 +179,7 @@ export const Projects: React.FC = () => {
         {/* Action Link below Gallery */}
         <div className="mt-14 pt-8 border-t border-[#D8D8CF] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <p className="text-sm font-mono text-[#6B6B62]">
-            Chaque ouvrage réalisé par EDC fait l’objet d’un dossier de récolement et de plans conformes à l’exécution.
+            Chaque chantier livré s’accompagne de plans conformes à l’exécution et d’un dossier de récolement.
           </p>
           <a
             href="#contact"

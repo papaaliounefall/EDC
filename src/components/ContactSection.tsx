@@ -99,10 +99,10 @@ export const ContactSection: React.FC = () => {
             <span className="w-8 h-[1px] bg-[#4D4D46]" aria-hidden="true" />
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6">
-            Démarrer un échange technique.
+            Parlons de votre projet.
           </h2>
           <p className="text-base sm:text-lg text-[#D8D8CF] font-light leading-relaxed">
-            Transmettez-nous les éléments clés de votre projet. Notre direction technique étudiera vos pièces graphiques et vos délais.
+            Décrivez-nous votre projet. Nous étudions votre demande et vous répondons rapidement avec une première approche.
           </p>
         </div>
 
@@ -185,7 +185,7 @@ export const ContactSection: React.FC = () => {
             {/* Note on Data Transparency */}
             <div className="p-4 border border-[#383832] bg-[#1F1F1B]/40 text-xs font-mono text-[#A8A89E]">
               <span className="text-[#D9A441] font-semibold block mb-1">Confidentialité des plans</span>
-              Les pièces écrites et graphiques transmises sont traitées sous engagement de stricte confidentialité professionnelle.
+              Vos plans et documents sont traités de manière strictement confidentielle.
             </div>
           </div>
 
@@ -202,14 +202,14 @@ export const ContactSection: React.FC = () => {
                       Demande enregistrée
                     </h3>
                     <p className="text-sm text-[#D8D8CF] max-w-md mx-auto leading-relaxed">
-                      Merci <strong className="text-white">{formData.fullName}</strong>. Votre dossier pour{' '}
+                      Merci <strong className="text-white">{formData.fullName}</strong>. Votre demande pour{' '}
                       <strong className="text-white">{formData.projectType}</strong> ({formData.projectLocation})
-                      a bien été transmis à la direction technique d’EDC.
+                      a bien été transmise à notre équipe. Nous vous recontactons rapidement.
                     </p>
                   </div>
 
                   <div className="p-4 bg-[#292924] border border-[#383832] max-w-md mx-auto text-left font-mono text-xs text-[#A8A89E]">
-                    <span className="block text-[#D9A441] mb-1">RÉCAPITULATIF DE VOTRE DOSSIER</span>
+                    <span className="block text-[#D9A441] mb-1">VOTRE DEMANDE</span>
                     <div>Contact : {formData.phone} | {formData.email}</div>
                     <div className="truncate mt-1 text-[#EBEBE4]">« {formData.message} »</div>
                   </div>

@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
           {/* Legal Coordinates Column */}
           <div className="md:col-span-4 space-y-3 text-xs font-mono">
             <span className="block text-[#D9A441] uppercase tracking-widest font-semibold mb-2">
-              COORDINATION
+              COORDONNÉES
             </span>
             <div className="space-y-2 text-[#8C8C80]">
               {contactLines.length > 0 ? (
@@ -119,7 +119,7 @@ export const Footer: React.FC = () => {
             </button>
           </div>
           <div>
-            Exécution architecturale & BTP • Sénégal
+            Construction & travaux publics • Sénégal
           </div>
         </div>
       </div>

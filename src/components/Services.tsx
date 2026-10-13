@@ -26,7 +26,7 @@ export const Services: React.FC = () => {
             </h2>
           </div>
           <p className="text-base sm:text-lg text-[#D8D8CF] max-w-md font-light leading-relaxed">
-            Des solutions adaptées aux exigences de chaque projet, de la construction aux travaux d’infrastructure.
+            Du bâtiment aux infrastructures, nous prenons en charge votre projet de l’étude à la livraison.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export const Services: React.FC = () => {
                   <div className="px-4 sm:px-12 pb-8 pt-2 grid grid-cols-1 md:grid-cols-12 gap-8 border-t border-[#383832]/60 animate-in fade-in duration-300">
                     <div className="md:col-span-6 space-y-4">
                       <h4 className="text-xs uppercase tracking-widest font-mono text-[#D9A441]">
-                        Approche & Conduite technique
+                        Notre approche
                       </h4>
                       <p className="text-sm sm:text-base text-[#EBEBE4] leading-relaxed font-light">
                         {service.fullDesc}
@@ -91,7 +91,7 @@ export const Services: React.FC = () => {
 
                     <div className="md:col-span-6">
                       <h4 className="text-xs uppercase tracking-widest font-mono text-[#D9A441] mb-4">
-                        Prestations & Typologies prises en charge
+                        Ce que nous réalisons
                       </h4>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         {service.interventions.map((item, i) => (
@@ -114,12 +114,12 @@ export const Services: React.FC = () => {
 
         {/* Note on adaptability */}
         <div className="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono text-[#8C8C80] border-t border-[#292924] pt-6">
-          <span>* Prestations configurables selon le cahier des charges et le dossier d’ingénierie.</span>
+          <span>* Chaque prestation est ajustée à votre cahier des charges et à votre budget.</span>
           <a
             href="#contact"
             className="inline-flex items-center gap-1.5 text-[#D9A441] hover:underline"
           >
-            <span>Soumettre les plans de votre ouvrage</span>
+            <span>Parler de votre projet</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>

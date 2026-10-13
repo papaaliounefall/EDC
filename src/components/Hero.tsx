@@ -79,9 +79,9 @@ export const Hero: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4 text-[11px] text-[#A8A89E]">
-            <span>Sénégal • Dakar & Régions</span>
+            <span>Sénégal • Thiès & Régions</span>
             <span className="text-[#4D4D46]">|</span>
-            <span>Rigueur technique & Exécution</span>
+            <span>Qualité d’exécution & suivi de chantier</span>
           </div>
         </div>
       </div>

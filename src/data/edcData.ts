@@ -18,13 +18,13 @@ export const COMPANY_INFO = {
   shortName: 'EDC',
   tagline: 'Construire avec précision. Bâtir pour durer.',
   subtitle:
-    'EDC accompagne vos projets de construction et de travaux publics avec une approche fondée sur la qualité, la rigueur et la maîtrise de l’exécution.',
+    'De l’étude à la livraison, EDC construit des bâtiments et des infrastructures durables au Sénégal. Une équipe expérimentée, des délais tenus, un chantier suivi de bout en bout.',
   domains: 'Bâtiment • Génie civil • Travaux publics',
   phone: '+221 77 710 95 05',
   phoneRaw: '+221777109505',
   email: 'contact@edc.sn',
   emailDevis: 'commercial@edc.sn',
-  address: 'Mbour, Saly Carrefour, commune de Saly Portudal',
+  address: 'Mbour, Saly Carrefour, commune de Saly Portudal, Thiès',
   country: 'Sénégal',
   nineA: '010809666',
   rccm: 'SN MBR 2023 A 3538',
@@ -46,9 +46,9 @@ export const SERVICES_LIST: ServiceItem[] = [
   {
     number: '01',
     title: 'CONSTRUCTION DE BÂTIMENTS',
-    shortDesc: 'Construction et réalisation de bâtiments adaptés aux exigences du projet.',
+    shortDesc: 'Des bâtiments solides et conformes, du gros œuvre aux finitions.',
     fullDesc:
-      'Prise en charge intégrale des ouvrages résidentiels, tertiaires et commerciaux. De l’élévation du gros œuvre jusqu’au clos-couvert et finitions techniques, chaque phase fait l’objet d’un contrôle rigoureux de mise en œuvre.',
+      'Nous réalisons vos bâtiments résidentiels, tertiaires et commerciaux, du gros œuvre aux finitions. Chaque étape est contrôlée sur le terrain pour garantir la solidité de l’ouvrage et le respect de vos plans.',
     interventions: [
       'Gros œuvre et maçonnerie générale',
       'Ouvrages en béton armé banché et préfabriqué',
@@ -59,9 +59,9 @@ export const SERVICES_LIST: ServiceItem[] = [
   {
     number: '02',
     title: 'GÉNIE CIVIL',
-    shortDesc: 'Travaux et ouvrages nécessitant précision technique et maîtrise de l’exécution.',
+    shortDesc: 'Des ouvrages techniques et des fondations réalisés avec précision.',
     fullDesc:
-      'Réalisation d’infrastructures techniques, d’ouvrages d’art, de fondations spéciales et de structures porteuses exigeant une rigueur absolue dans les calculs de charge et le respect des normes d’ingénierie.',
+      'Fondations, ouvrages d’art et structures porteuses : nous intervenons sur les ouvrages qui demandent méthode et précision, dans le respect des normes d’ingénierie.',
     interventions: [
       'Fondations profondes, radiers et semelles armées',
       'Ouvrages d’art et structures hydrauliques',
@@ -72,9 +72,9 @@ export const SERVICES_LIST: ServiceItem[] = [
   {
     number: '03',
     title: 'TRAVAUX PUBLICS',
-    shortDesc: 'Interventions liées aux infrastructures et aux aménagements.',
+    shortDesc: 'Voiries, réseaux et aménagements d’infrastructures.',
     fullDesc:
-      'Exécution de chantiers d’infrastructures d’intérêt public et privé. Coordination des moyens matériels lourds pour répondre aux contraintes du terrain et aux exigences des donneurs d’ordre.',
+      'Nous réalisons des infrastructures publiques et privées : voiries, drainage, plateformes. Nos moyens matériels et notre organisation s’adaptent aux contraintes du terrain et à vos délais.',
     interventions: [
       'Aménagement de voiries urbaines et interurbaines',
       'Infrastructures de drainage et gestion pluviale',
@@ -87,7 +87,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     title: 'TERRASSEMENT & VRD',
     shortDesc: 'Préparation des terrains, réseaux et aménagements extérieurs.',
     fullDesc:
-      'Travaux préalables de nivellement, décapage et viabilisation des parcelles. Pose des réseaux d’assainissement, d’eau potable, d’électricité et de télécommunication selon les normes en vigueur.',
+      'Terrassement, viabilisation et pose des réseaux (assainissement, eau, électricité, télécoms). Nous préparons votre terrain et l’amenons aux normes, prêt à accueillir votre projet.',
     interventions: [
       'Déblais, remblais et nivellement géométrique',
       'Réseaux d’assainissement et évacuation des eaux',
@@ -98,9 +98,9 @@ export const SERVICES_LIST: ServiceItem[] = [
   {
     number: '05',
     title: 'RÉNOVATION & RÉHABILITATION',
-    shortDesc: 'Transformation, modernisation et remise en état des ouvrages existants.',
+    shortDesc: 'Redonner vie à vos bâtiments existants.',
     fullDesc:
-      'Diagnostic structurel, confortement de bâtis existants et remise aux normes architecturales et thermiques. Restructuration complète des espaces pour prolonger la pérennité du patrimoine bâti.',
+      'Diagnostic, confortement et remise aux normes de bâtiments existants. Nous restructurons et modernisons vos espaces pour prolonger la vie de votre patrimoine.',
     interventions: [
       'Renforcement et consolidation structurelle',
       'Reprise en sous-œuvre et réfection des planchers',
@@ -111,9 +111,9 @@ export const SERVICES_LIST: ServiceItem[] = [
   {
     number: '06',
     title: 'AMÉNAGEMENT',
-    shortDesc: "Solutions d'aménagement adaptées aux besoins du site et du projet.",
+    shortDesc: 'Des aménagements extérieurs adaptés à votre site.',
     fullDesc:
-      'Aménagement architectural d’espaces extérieurs, cours pavées, esplanades de bureaux et clôtures techniques. Intégration paysagère et minérale soignée respectant le contexte climatique local.',
+      'Aménagement des abords : pavage, clôtures, esplanades et espaces extérieurs. Des finitions soignées, pensées pour votre usage et le climat local.',
     interventions: [
       'Pavage technique et dallage extérieur',
       'Clôtures périphériques et portails sécurisés',
@@ -131,8 +131,8 @@ export const PROJECTS_LIST: ProjectItem[] = [
     location: 'Dakar',
     image: buildingImg,
     alt: 'Projet de construction de bâtiment résidentiel et mixte à Dakar',
-    scope: 'Gros œuvre en béton armé, élévation structurelle et brise-soleil architecturaux intégrés.',
-    executionNote: 'Typologie de référence pour programme résidentiel et tertiaire EDC.',
+    scope: 'Gros œuvre en béton armé, élévation des structures et brise-soleil intégrés.',
+    executionNote: 'Un exemple représentatif de nos programmes résidentiels et tertiaires.',
     specs: {
       programme: 'Bâtiment collectif R+5 & espaces tertiaires',
       structure: 'Béton armé précontraint et maçonnerie pleine',
@@ -141,13 +141,13 @@ export const PROJECTS_LIST: ProjectItem[] = [
   },
   {
     id: 'proj-02',
-    title: 'Ouvrage de Génie Civil & Plateforme VRD',
-    category: 'Génie Civil',
+    title: 'Ouvrage de Travaux Publics & Plateforme VRD',
+    category: 'Travaux Publics',
     location: 'Sénégal',
     image: civilImg,
-    alt: 'Chantier de génie civil et fondations d’infrastructure au Sénégal',
-    scope: 'Fondations spéciales, terrassements massifs et réseaux hydrauliques de drainage.',
-    executionNote: 'Ouvrage technique soumis aux exigences de capacité portante et de durabilité.',
+    alt: 'Chantier de travaux publics et fondations d’infrastructure au Sénégal',
+    scope: 'Fondations spéciales, terrassements et réseaux de drainage.',
+    executionNote: 'Un ouvrage technique conçu pour la résistance et la durabilité.',
     specs: {
       programme: 'Plateforme technique & infrastructure d’accès',
       structure: 'Semelles filantes renforcées, radiers et buses béton',
@@ -161,8 +161,8 @@ export const PROJECTS_LIST: ProjectItem[] = [
     location: 'Dakar',
     image: amenagementImg,
     alt: 'Aménagement extérieur et façade contemporaine pour complexe tertiaire',
-    scope: 'Esplanade pavée, voiries légères, caniveaux techniques et auvent d’accès contemporain.',
-    executionNote: 'Exécution des abords et finitions extérieures de haute tenue.',
+    scope: 'Esplanade pavée, voiries légères, caniveaux et auvent d’accès.',
+    executionNote: 'Aménagement des abords et finitions extérieures soignées.',
     specs: {
       programme: 'Esplanade d’accueil & voirie d’accès tertiaire',
       structure: 'Pavés autobloquants haute résistance & caniveau fente',
@@ -175,40 +175,40 @@ export const APPROACH_STEPS: ApproachStep[] = [
   {
     number: '01',
     title: 'ÉCOUTER',
-    description: 'Comprendre les besoins, les contraintes et les objectifs du projet.',
-    deliverable: 'Cahier des charges & revue des attentes initiales',
+    description: 'Nous écoutons vos besoins, vos contraintes et vos objectifs.',
+    deliverable: 'Récapitulatif de vos besoins',
   },
   {
     number: '02',
     title: 'PLANIFIER',
-    description: 'Structurer les différentes phases et anticiper les contraintes techniques.',
-    deliverable: 'Planning prévisionnel & étude d’exécution',
+    description: 'Nous organisons les étapes et anticipons les contraintes techniques.',
+    deliverable: 'Planning et étude d’exécution',
   },
   {
     number: '03',
     title: 'CONSTRUIRE',
-    description: 'Assurer une exécution rigoureuse conformément aux exigences du projet.',
-    deliverable: 'Chantier piloté par un encadrement permanent',
+    description: 'Nous construisons avec rigueur, selon vos plans et vos exigences.',
+    deliverable: 'Chantier piloté par un encadrement dédié',
   },
   {
     number: '04',
     title: 'CONTRÔLER',
-    description: 'Suivre la qualité, les délais et l’avancement des travaux.',
-    deliverable: 'Points d’arrêt qualité & rapports réguliers',
+    description: 'Nous suivons la qualité, les délais et l’avancement des travaux.',
+    deliverable: 'Points de contrôle qualité & comptes-rendus',
   },
   {
     number: '05',
     title: 'LIVRER',
-    description: 'Finaliser le projet avec attention portée aux détails.',
+    description: 'Nous finalisons le projet avec attention portée aux détails.',
     deliverable: 'Réception soignée & levée des réserves',
   },
 ];
 
 export const STATS_LIST = [
-  { value: 'XX+', label: "Années d'expérience" },
-  { value: 'XX', label: 'Chantiers livrés' },
-  { value: 'XX X00', label: 'm² construits' },
-  { value: 'XX', label: 'Clients & partenaires' },
+  { value: 'Bâtiment & TP', label: 'Savoir-faire' },
+  { value: 'Thiès & Dakar', label: "Zones d'intervention" },
+  { value: 'Interlocuteur dédié', label: 'Suivi de chantier' },
+  { value: 'Sur mesure', label: 'Projets & devis' },
 ];
 
 export const VALUES_LIST = [
@@ -216,24 +216,24 @@ export const VALUES_LIST = [
     label: 'RIGUEUR',
     description: 'Une attention portée aux détails et à la qualité d’exécution.',
     metric: 'Exécution',
-    sub: 'Tolérances millimétriques et conformité aux plans d’architecte.',
+    sub: 'Des finitions soignées et le respect strict de vos plans.',
   },
   {
     label: 'FIABILITÉ',
-    description: 'Une organisation pensée pour respecter les engagements du projet.',
+    description: 'Une organisation qui tient ses engagements.',
     metric: 'Méthode',
-    sub: 'Respect scrupuleux du cahier des charges et des plannings arrêtés.',
+    sub: 'Cahier des charges et plannings respectés.',
   },
   {
     label: 'QUALITÉ',
     description: 'Des exigences élevées à chaque étape de réalisation.',
     metric: 'Matériaux',
-    sub: 'Sélection intransigeante des approvisionnements (acier, granulats, ciment certifié).',
+    sub: 'Une sélection rigoureuse des matériaux (acier, granulats, ciment certifié).',
   },
   {
     label: 'PROXIMITÉ',
     description: 'Une relation directe et transparente avec les clients et partenaires.',
     metric: 'Dialogue',
-    sub: 'Interlocuteur unique dédié, reporting clair et réactivité sur le terrain.',
+    sub: 'Un interlocuteur unique, une information claire et une vraie réactivité.',
   },
 ];

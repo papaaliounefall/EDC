@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProjectModal }) => {
         <a
           href="/"
           className="flex items-center transition-opacity hover:opacity-90 shrink-0"
-          aria-label="EDC — Entreprise Dia Construction"
+          aria-label="EDC - Entreprise Dia Construction"
         >
           <EDCLogo variant="dark" className="h-9 sm:h-10 w-auto" />
         </a>

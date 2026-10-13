@@ -30,8 +30,8 @@ export default function Team() {
             L'encadrement qui fait la différence
           </h1>
           <p className="text-base sm:text-lg text-[#D8D8CF] max-w-2xl font-light leading-relaxed mb-12">
-            Une équipe soudée au service de la rigueur technique, du respect des délais et de la
-            qualité d'exécution.
+            Une équipe soudée, proche du terrain, qui veille à la qualité et au respect des délais sur
+            chaque chantier.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

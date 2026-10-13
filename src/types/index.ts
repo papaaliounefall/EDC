@@ -1,7 +1,7 @@
 export interface ProjectItem {
   id: string;
   title: string;
-  category: 'Bâtiment' | 'Génie Civil' | 'VRD & Aménagements';
+  category: 'Bâtiment' | 'Travaux Publics' | 'VRD & Aménagements';
   location: string;
   image: string;
   alt: string;

@@ -20,7 +20,7 @@ export const WhyEDC: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-[#52524C] leading-relaxed mb-8 font-normal">
-              Dans un secteur où la solidité de l’ouvrage engage la sécurité et le patrimoine, EDC privilégie des fondations morales et professionnelles inébranlables.
+              Bâtir engage notre responsabilité : la sécurité des usagers, la solidité de l’ouvrage et la confiance de nos clients guident chacune de nos décisions.
             </p>
 
             <div className="p-6 bg-white border border-[#D8D8CF]">
@@ -28,7 +28,7 @@ export const WhyEDC: React.FC = () => {
                 Notre principe directeur
               </div>
               <blockquote className="text-sm text-[#1F1F1B] italic leading-relaxed border-l-2 border-[#A67825] pl-4">
-                « La réussite d’un chantier réside dans la cohérence absolue entre les plans d’ingénierie et la réalité du coulage sur le terrain. »
+                « Un chantier réussi, c’est un plan respecté, une équipe soudée et un client informé à chaque étape. »
               </blockquote>
             </div>
           </div>

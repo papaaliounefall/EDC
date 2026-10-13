@@ -17,7 +17,7 @@ export const Approach: React.FC = () => {
             De l’idée à la réalisation.
           </h2>
           <p className="text-base sm:text-lg text-[#D8D8CF] font-light leading-relaxed">
-            Une méthodologie structurée pour garantir la conformité aux normes, la maîtrise des coûts et le respect des délais convenus.
+            Une méthode claire, des étapes définies ensemble, pour livrer votre projet dans les délais et dans le budget.
           </p>
         </div>
 
@@ -69,11 +69,11 @@ export const Approach: React.FC = () => {
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 bg-[#D9A441]" aria-hidden="true" />
             <span className="font-mono text-xs uppercase tracking-wider text-white">
-              Garantie d’engagement & Suivi de chantier
+              Suivi de chantier & transparence
             </span>
           </div>
           <span className="text-xs text-[#D8D8CF] font-light max-w-lg">
-            Réunions hebdomadaires de coordination technique et comptes-rendus d’avancement systématiques pour chaque maître d’ouvrage.
+            Des points de suivi réguliers et des comptes-rendus d’avancement pour que vous sachiez toujours où en est votre chantier.
           </span>
         </div>
       </div>

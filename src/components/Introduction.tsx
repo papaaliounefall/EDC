@@ -25,12 +25,13 @@ export const Introduction: React.FC = () => {
 
             <div className="space-y-6 text-[#4D4D46] text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
               <p>
-                Chaque projet repose sur une combinaison de précision, de méthode et de savoir-faire.
-                EDC place la qualité d’exécution et la compréhension des besoins au cœur de son approche.
+                EDC est une entreprise de construction sénégalaise basée à Mbour. Nous accompagnons
+                particuliers, entreprises et collectivités de l’étude à la livraison, avec une même exigence :
+                un ouvrage solide, livré dans les délais et au juste coût.
               </p>
               <p className="text-sm sm:text-base text-[#6B6B62]">
-                De l’analyse des contraintes du terrain jusqu’au déploiement sur site, nous veillons au
-                respect strict des règles de l’art, des plannings d’exécution et des normes techniques en vigueur au Sénégal.
+                Notre équipe travaille au plus près du terrain, dans le respect des règles de l’art et des
+                normes en vigueur au Sénégal, et vous tient informé à chaque étape du chantier.
               </p>
             </div>
 
@@ -41,7 +42,7 @@ export const Introduction: React.FC = () => {
                   MÉTIERS
                 </span>
                 <span className="text-[#1F1F1B] font-medium font-sans text-sm">
-                  Gros œuvre & Génie civil
+                  Bâtiment & Travaux publics
                 </span>
               </div>
               <div>
@@ -49,7 +50,7 @@ export const Introduction: React.FC = () => {
                   CHAMP D’ACTION
                 </span>
                 <span className="text-[#1F1F1B] font-medium font-sans text-sm">
-                  Dakar & Régions
+                  Thiès & Régions
                 </span>
               </div>
               <div className="col-span-2 sm:col-span-1">
@@ -57,7 +58,7 @@ export const Introduction: React.FC = () => {
                   ENGAGEMENT
                 </span>
                 <span className="text-[#1F1F1B] font-medium font-sans text-sm">
-                  Maîtrise d’exécution
+                  Qualité & délais tenus
                 </span>
               </div>
             </div>
@@ -86,7 +87,7 @@ export const Introduction: React.FC = () => {
               {/* Caption */}
               <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-[#6B6B62] px-1">
                 <span>MATIÈRE & STRUCTURE</span>
-                <span className="text-[#A67825]">REF : EDC-EXEC</span>
+                <span className="text-[#A67825]">Mbour • Sénégal</span>
               </div>
             </div>
           </div>

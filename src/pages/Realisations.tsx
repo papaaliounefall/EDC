@@ -10,7 +10,7 @@ export default function Realisations() {
   useSeo(getSeo('/realisations'));
 
   const [activeCategory, setActiveCategory] = useState<string>('Tous');
-  const categories = ['Tous', 'Bâtiment', 'Génie Civil', 'VRD & Aménagements'];
+  const categories = ['Tous', 'Bâtiment', 'Travaux Publics', 'VRD & Aménagements'];
   const filteredProjects =
     activeCategory === 'Tous'
       ? PROJECTS_LIST
@@ -74,7 +74,7 @@ export default function Realisations() {
                   </h2>
                   <p className="text-sm text-[#52524C] leading-relaxed mb-4">{project.scope}</p>
                   <div className="pt-4 border-t border-[#EBEBE4] text-xs font-mono text-[#A67825]">
-                    Fiche détaillée à venir
+                    Dossier technique disponible sur demande.
                   </div>
                 </div>
               </article>

@@ -87,7 +87,7 @@ export const ProjectConsultationModal: React.FC<ProjectConsultationModalProps> =
             <EDCLogo variant="dark" className="h-8 w-auto hidden sm:block" />
             <div>
               <span className="text-[11px] font-mono uppercase tracking-widest text-[#D9A441] block">
-                DIAGNOSTIC PRÉALABLE & ÉTUDE
+                ÉTUDE DE VOTRE PROJET
               </span>
               <h3 id="consultation-dialog-title" className="font-display text-lg sm:text-xl font-bold text-white">
                 Parler de votre projet avec EDC
@@ -115,9 +115,9 @@ export const ProjectConsultationModal: React.FC<ProjectConsultationModalProps> =
                 Demande d’étude enregistrée
               </h4>
               <p className="text-sm text-[#D8D8CF] leading-relaxed max-w-md mx-auto">
-                Nos équipes analyseront votre demande pour le projet{' '}
+                Merci, votre demande pour le projet{' '}
                 <strong className="text-white">{formData.projectScope}</strong> à{' '}
-                <strong className="text-white">{formData.location}</strong>. Un responsable prendra contact avec vous sous 24 à 48h ouvrées.
+                <strong className="text-white">{formData.location}</strong> a bien été reçue. Un responsable vous contacte sous 24 à 48 h ouvrées.
               </p>
               <div className="pt-4">
                 <button
@@ -132,7 +132,7 @@ export const ProjectConsultationModal: React.FC<ProjectConsultationModalProps> =
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <p className="text-xs text-[#A8A89E] font-light leading-relaxed">
-                Remplissez ce court formulaire pour soumettre les caractéristiques de votre opération de construction ou travaux publics.
+                Remplissez ce court formulaire : nous étudions votre projet et revenons vers vous rapidement.
               </p>
 
               {isProvided(COMPANY_INFO.emailDevis) && (
