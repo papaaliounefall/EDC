@@ -63,6 +63,21 @@ export default function Realisations() {
                     className="w-full h-full object-cover"
                   />
                 </div>
+                {project.gallery && project.gallery.length > 1 && (
+                  <div className="grid grid-cols-4 gap-1 p-2 bg-white">
+                    {project.gallery.slice(0, 4).map((src, i) => (
+                      <div key={i} className="aspect-square overflow-hidden bg-[#EBEBE4]">
+                        <img
+                          src={src}
+                          alt={`${project.title} — photo ${i + 1}`}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <div className="p-6 sm:p-8">
                   <div className="flex items-center gap-2 text-xs font-mono text-[#6B6B62] mb-3">
                     <span>{project.category}</span>

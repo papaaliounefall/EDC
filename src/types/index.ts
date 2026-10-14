@@ -7,6 +7,7 @@ export interface ProjectItem {
   alt: string;
   scope: string;
   executionNote: string;
+  gallery?: string[];
   specs: {
     programme: string;
     structure: string;

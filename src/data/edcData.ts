@@ -1,7 +1,22 @@
 import { ApproachStep, ProjectItem, ServiceItem } from '../types';
 import buildingImg from '../assets/images/edc_project_building_1791383501224.webp';
-import civilImg from '../assets/images/edc_project_civil_1791383512872.webp';
 import amenagementImg from '../assets/images/edc_project_amenagement_1791383524028.webp';
+import autoroutePfo01 from '../assets/images/autoroute-pfo/autoroute-pfo-01.webp';
+import autoroutePfo02 from '../assets/images/autoroute-pfo/autoroute-pfo-02.webp';
+import autoroutePfo03 from '../assets/images/autoroute-pfo/autoroute-pfo-03.webp';
+import autoroutePfo04 from '../assets/images/autoroute-pfo/autoroute-pfo-04.webp';
+import autoroutePfo05 from '../assets/images/autoroute-pfo/autoroute-pfo-05.webp';
+import autorouteArezki01 from '../assets/images/autoroute-arezki/autoroute-arezki-01.webp';
+import autorouteArezki02 from '../assets/images/autoroute-arezki/autoroute-arezki-02.webp';
+import autorouteArezki03 from '../assets/images/autoroute-arezki/autoroute-arezki-03.webp';
+import autorouteArezki04 from '../assets/images/autoroute-arezki/autoroute-arezki-04.webp';
+import autorouteArezki05 from '../assets/images/autoroute-arezki/autoroute-arezki-05.webp';
+import autorouteArezki06 from '../assets/images/autoroute-arezki/autoroute-arezki-06.webp';
+import autorouteArezki07 from '../assets/images/autoroute-arezki/autoroute-arezki-07.webp';
+import autorouteArezki08 from '../assets/images/autoroute-arezki/autoroute-arezki-08.webp';
+import autorouteArezki09 from '../assets/images/autoroute-arezki/autoroute-arezki-09.webp';
+import autorouteArezki10 from '../assets/images/autoroute-arezki/autoroute-arezki-10.webp';
+import autorouteArezki11 from '../assets/images/autoroute-arezki/autoroute-arezki-11.webp';
 
 /** Marqueur des données restant à renseigner avant mise en ligne. */
 export const PENDING_VALUE = '[à compléter]';
@@ -144,8 +159,8 @@ export const PROJECTS_LIST: ProjectItem[] = [
     title: 'Ouvrage de Travaux Publics & Plateforme VRD',
     category: 'Travaux Publics',
     location: 'Sénégal',
-    image: civilImg,
-    alt: 'Chantier de travaux publics et fondations d’infrastructure au Sénégal',
+    image: autoroutePfo03,
+    alt: 'Chantier de travaux publics et plateforme VRD sur un axe autoroutier au Sénégal',
     scope: 'Fondations spéciales, terrassements et réseaux de drainage.',
     executionNote: 'Un ouvrage technique conçu pour la résistance et la durabilité.',
     specs: {
@@ -167,6 +182,50 @@ export const PROJECTS_LIST: ProjectItem[] = [
       programme: 'Esplanade d’accueil & voirie d’accès tertiaire',
       structure: 'Pavés autobloquants haute résistance & caniveau fente',
       phasage: 'Décapage, empierrement, pose mécanique & raccordements',
+    },
+  },
+  {
+    id: 'proj-04',
+    title: 'Autoroute Dakar–Saint-Louis (PFO Sénégal)',
+    category: 'Travaux Publics',
+    location: 'Dakar – Saint-Louis',
+    image: autoroutePfo01,
+    alt: 'Chantier de l’autoroute Dakar–Saint-Louis réalisé avec PFO Sénégal',
+    scope: 'Terrassements et travaux d’infrastructure sur l’autoroute Dakar–Saint-Louis, en collaboration avec PFO Sénégal.',
+    executionNote: 'Une opération d’envergure menée sur l’axe autoroutier Dakar–Saint-Louis.',
+    gallery: [autoroutePfo01, autoroutePfo02, autoroutePfo03, autoroutePfo04, autoroutePfo05],
+    specs: {
+      programme: 'Infrastructure autoroutière — travaux de terrassement et de voirie',
+      structure: 'Terrassement massif, couches de chaussée et ouvrages hydrauliques',
+      phasage: 'Installation de chantier, terrassement, corps de chaussée & finitions',
+    },
+  },
+  {
+    id: 'proj-05',
+    title: 'Chantier autoroute Dakar–Saint-Louis (Arezki)',
+    category: 'Travaux Publics',
+    location: 'Dakar – Saint-Louis',
+    image: autorouteArezki05,
+    alt: 'Chantier autoroutier Dakar–Saint-Louis mené avec Arezki',
+    scope: 'Travaux de terrassement et d’infrastructure menés sur le chantier autoroutier Dakar–Saint-Louis avec Arezki.',
+    executionNote: 'Un chantier d’infrastructure suivi de bout en bout, au plus près du terrain.',
+    gallery: [
+      autorouteArezki01,
+      autorouteArezki02,
+      autorouteArezki03,
+      autorouteArezki04,
+      autorouteArezki05,
+      autorouteArezki06,
+      autorouteArezki07,
+      autorouteArezki08,
+      autorouteArezki09,
+      autorouteArezki10,
+      autorouteArezki11,
+    ],
+    specs: {
+      programme: 'Chantier autoroutier — terrassement et infrastructures',
+      structure: 'Terrassements, ouvrages en béton et réseaux techniques',
+      phasage: 'Préparation, exécution des travaux & contrôle qualité',
     },
   },
 ];

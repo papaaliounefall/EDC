@@ -1,5 +1,5 @@
 import React from 'react';
-import introImg from '../assets/images/edc_intro_detail_1791383486997.webp';
+import introImg from '../assets/images/autoroute-arezki/autoroute-arezki-04.webp';
 
 export const Introduction: React.FC = () => {
   return (
@@ -78,7 +78,7 @@ export const Introduction: React.FC = () => {
                   src={introImg}
                   loading="lazy"
                   decoding="async"
-                  alt="Détail architectural de béton banché et structure métallique - EDC"
+                  alt="Travaux d’infrastructure sur le chantier autoroutier Dakar–Saint-Louis — EDC"
                   className="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-700 ease-out"
                   referrerPolicy="no-referrer"
                 />
@@ -86,7 +86,7 @@ export const Introduction: React.FC = () => {
 
               {/* Caption */}
               <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-[#6B6B62] px-1">
-                <span>MATIÈRE & STRUCTURE</span>
+                <span>CHANTIER & INFRASTRUCTURE</span>
                 <span className="text-[#A67825]">Thiès • Sénégal</span>
               </div>
             </div>
