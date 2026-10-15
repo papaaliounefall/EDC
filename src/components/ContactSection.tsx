@@ -55,7 +55,8 @@ export const ContactSection: React.FC = () => {
     setIsSubmitting(true);
     setErrors({});
     try {
-      await submitToFormspree({
+      await submitToFormspree('contact', {
+        _subject: `[EDC] Nouvelle demande — ${formData.projectType}`,
         form: 'contact',
         nom: formData.fullName,
         telephone: formData.phone,

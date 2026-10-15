@@ -48,7 +48,8 @@ export const ProjectConsultationModal: React.FC<ProjectConsultationModalProps> =
     setError('');
     setIsSubmitting(true);
     try {
-      await submitToFormspree({
+      await submitToFormspree('devis', {
+        _subject: `[EDC] Demande de devis — ${formData.projectScope}`,
         form: 'consultation-projet',
         nom: formData.name,
         telephone: formData.phone,
